@@ -1,0 +1,17 @@
+@keyframes slideOpen {
+    0% {
+        width:0;
+    }
+    100% {
+        width:100%;
+    }
+}
+
+@keyframes slideClosed {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width:0;
+    }
+}

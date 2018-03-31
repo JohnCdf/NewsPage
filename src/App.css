@@ -1,0 +1,11 @@
+body {
+  font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+  padding-top: 15vh;
+}
+
+.slideOpen {
+  animation: slideOpen .5s forwards 1;
+}
+
+
+

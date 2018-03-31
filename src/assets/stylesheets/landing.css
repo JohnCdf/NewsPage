@@ -1,0 +1,150 @@
+
+.header-master {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+
+    width:100%;
+
+    box-shadow: 1px 1px 1px rgb(61, 61, 61);
+}
+.header-main {
+    width:100%;
+    display: inline-flex;
+    justify-content: space-between;
+
+    overflow: hidden;
+    background: #1f3950;
+    color:#ba7f16;
+}
+.header-main__left {
+    float:left;
+    margin-right: auto;
+    height:100%;
+
+    background: #fbfcf7;
+}
+.header-main__left * {
+    height: 100%;
+    line-height: 100%;
+    margin: 0 20px;
+    font-size: 1.5em;
+}
+.header-main__left a {
+    color:#ba7f16;
+    text-decoration: none;
+}
+.header-main__left img {
+    height: 10vh;
+}
+
+
+.header-main__right {
+    float:right;
+    margin-left: auto;
+    height:10vh;
+    text-align: right;
+}
+.header-main__right .btn {
+    height: 100%;
+    line-height: 100%;
+    margin: 0 20px;
+    font-size: 1.5em;
+    background: #1f3950;
+    color:#ba7f16;
+    transition: .2s color ease-in-out;
+}
+.header-main__right .btn:hover {
+    color: white;border-bottom: 5px solid rgb(21, 39, 54);
+}
+.header-main__right .btn:active {
+    border-top: 5px solid rgb(21, 39, 54);
+}
+
+.header-pre {
+    width:100%;
+    background: white;
+    color:#1f3950;
+    display:inline-flex;
+    justify-content: space-between;
+}
+.header-pre a {
+    color:#003a61;
+    margin: 0 10px;
+}
+.header-pre span{
+    margin-right:auto;
+    float:left;
+}
+#side-menu {
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    width: 0;
+    max-width: 50.5vh;
+    background:white;
+    color:#1f3950;
+    z-index: 10;
+}
+.side-menu__head {
+    text-align:center;
+    width:100%;
+    color: rgb(27, 27, 27);
+}
+
+.side-list {
+    height:100%;
+    width:100%;
+    overflow-y: scroll;
+}
+.side-list a {
+    margin-top:10px;
+    width:100%;
+    border-radius:0;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    color: rgb(21, 64, 88);
+    transition: .2s all ease-in-out;
+}
+.side-list a:hover{
+    border-left:5px solid rgb(21, 64, 88);
+}
+.article-large{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    max-width: 90vw;
+    text-align: center;
+    overflow: hidden;
+    margin: 1em auto;
+    background:rgb(255, 254, 229);
+  }
+.article-large img{
+    max-width:60%;
+}
+.article-large a {
+    color: rgb(32, 32, 32);
+    font-weight: bold;
+}
+.article-large p {
+    color: grey;
+}
+@media screen and (max-width:600px){
+    .header-main__left img {
+        width: 10vh;
+    }
+    .header-main__left a {
+        display:none;
+    }
+    .header-pre span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:360px){
+    .header-pre{
+        display: none;
+    }
+}
