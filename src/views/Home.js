@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import '../assets/stylesheets/landing.css';
-import '../assets/stylesheets/animations.css';
-import '../App.css';
 
 import {Link} from 'react-router-dom';
 

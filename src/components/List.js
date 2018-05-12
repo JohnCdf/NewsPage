@@ -5,8 +5,8 @@ class List extends Component {
     componentDidMount(){
         var news = this.props.items.map((item, i)=>{
             return(
-                <Link className="list-link btn" key={i} to={"article?id="+item.id} onClick={document.getElementById('side-menu').setAttribute('class', 'slideClosed')}>
-                    <p>{item.title}</p>
+                <Link className="subtitle" key={i} to={"article?id="+item.id} onClick={document.getElementById('side-menu').setAttribute('class', 'slideClosed')}>
+                {item.title}
                 </Link>
             )
         });
@@ -19,7 +19,7 @@ class List extends Component {
     };
 render(){
       return(
-        <div className='side-list'>
+        <div className='side-list section'>
             {this.state.news.length ? this.state.news : <h2> Cargando Noticias... </h2>}
         </div>
       )

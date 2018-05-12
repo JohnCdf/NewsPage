@@ -8,7 +8,7 @@ class Sidemenu extends Component {
 
         let self = this;
         firebase.database().ref("news").on('value',function(snapshot){
-            self.setState({ news: Object.values(snapshot.val()) });//CHECK!
+            self.setState({ news: Object.values(snapshot.val()) });
         });
 
     }
@@ -21,7 +21,7 @@ render(){
 return(
 <div id="side-menu">
 <Link to="/home">
-<h1 className="side-menu__head">Informe de España</h1>
+<h1 className="side-menu__head title">Informe de España</h1>
 </Link>
 <hr/>
 {this.state.news.length ? <List items={this.state.news}/> : 'Cargando...'}

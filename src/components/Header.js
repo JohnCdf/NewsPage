@@ -1,18 +1,12 @@
 import React, {Component} from 'react';
 import Logo from '../assets/logo-main.jpg';
 import {Link} from 'react-router-dom';
+import $ from 'jquery';
 
 class Header extends Component {
     slideToggle(){
-        var side = document.getElementById('side-menu');
-        var width = side.clientWidth;
-
-        side.removeAttribute('class');
-        if(width === 0 ){
-            side.setAttribute('class', 'slideOpen');
-        } else {
-            side.setAttribute('class', 'slideClosed');
-        }
+        $('#side-menu').toggleClass('active')
+        
     }
 
     constructor(props){

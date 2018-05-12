@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter,Route,Switch,Redirect} from 'react-router-dom';
 
+import './assets/stylesheets/bulma.css';
+
 import Home from './views/Home';
 import Article from './views/Article';
+import './App.css';
 
 import firebase from 'firebase';
-import registerServiceWorker from './registerServiceWorker';
-var config = {
-    apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: ""
-  };
-  firebase.initializeApp(config);
+
+import firebaseConfig from './config.js'//We dont want this to be public
+
+  firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render((
     <BrowserRouter>
@@ -28,4 +25,3 @@ ReactDOM.render((
     </Switch>
     </BrowserRouter>
 ), document.getElementById('root'));
-registerServiceWorker();

@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Sidemenu from '../components/Sidemenu';
 
 import '../assets/stylesheets/article.css';
-import '../App.css';
 
 import firebase from 'firebase';
 import { clearInterval } from 'timers';
@@ -58,12 +57,12 @@ class Article extends Component {
             <div>
             <Sidemenu/>
             <Header/>
-            <div className="article-page">
-            <h1>{this.state.article.title}</h1>
-            {this.state.article.by ? <p>{"Por: " + this.state.article.by}</p> : ''}
+            <div className="article-page section">
+            <h1 className="title">{this.state.article.title}</h1>
+            {this.state.article.by ? <p className="subtitle">{"Por: " + this.state.article.by}</p> : ''}
             <hr/>
             <img src={this.state.article.img} alt=""/>
-            <p>{this.state.article.content}</p>
+            <p className="content">{this.state.article.content}</p>
             </div>
             </div>
         )
