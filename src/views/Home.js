@@ -16,8 +16,8 @@ class Home extends Component {
       let array = Object.values(snapshot.val());
       let articles = array.map((item, i)=>{
         return(
-          <div className="article-large" key={i} >
-              <img src={item.img} className="img-responsive" alt=""/>
+          <div className="container content" key={i} >
+              <img src={item.img} alt=""/>
               <br/>
               <Link to={"article?id="+item.id}>
                 {item.title}

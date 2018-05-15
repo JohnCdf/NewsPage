@@ -57,12 +57,12 @@ class Article extends Component {
             <div>
             <Sidemenu/>
             <Header/>
-            <div className="article-page section">
+            <div className="section">
             <h1 className="title">{this.state.article.title}</h1>
             {this.state.article.by ? <p className="subtitle">{"Por: " + this.state.article.by}</p> : ''}
             <hr/>
             <img src={this.state.article.img} alt=""/>
-            <p className="content">{this.state.article.content}</p>
+            <p className="content is-medium">{this.state.article.content}</p>
             </div>
             </div>
         )
